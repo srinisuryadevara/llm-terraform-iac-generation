@@ -1,0 +1,46 @@
+provider "google" {
+  version = "~> 4.0"
+  project = var.project_id
+  region  = var.region
+}
+
+variable "project_id" {
+  type = string
+}
+
+variable "region" {
+  type    = string
+  default = "us-central1"
+}
+
+variable "repository_name" {
+  type = string
+}
+
+variable "location" {
+  type    = string
+  default = "us-central1"
+}
+
+variable "role" {
+  type = string
+}
+
+variable "member" {
+  type = string
+}
+
+resource "google_artifact_registry_repository" "example" {
+  provider = google
+  location  = var.location
+  repository_id = var.repository_name
+  format       = "DOCKER"
+}
+
+resource "google_artifact_registry_repository_iam_binding" "example" {
+  provider = google
+  location  = google_artifact_registry_repository.example.location
+  repository = google_artifact_registry_repository.example.name
+  role        = var.role
+  members     = [var.member]
+}

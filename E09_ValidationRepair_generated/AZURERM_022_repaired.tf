@@ -1,0 +1,118 @@
+provider "azurerm" {
+  version = "3.34.0"
+  features {}
+}
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "load_balancer_name" {
+  type = string
+}
+
+variable "backend_pool_name" {
+  type = string
+}
+
+variable "health_probe_name" {
+  type = string
+}
+
+variable "health_probe_port" {
+  type = number
+}
+
+variable "health_probe_protocol" {
+  type = string
+}
+
+variable "health_probe_interval" {
+  type = number
+}
+
+variable "health_probe_unhealthy_threshold" {
+  type = number
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = var.resource_group_name
+  location = var.location
+  tags = {
+    Environment = "example"
+    ManagedBy   = "Terraform"
+  }
+}
+
+resource "azurerm_public_ip" "example" {
+  name                = "example-public-ip"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  allocation_method   = "Dynamic"
+  tags = {
+    Environment = "example"
+    ManagedBy   = "Terraform"
+  }
+}
+
+resource "azurerm_lb" "example" {
+  name                = var.load_balancer_name
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  sku                 = "Standard"
+  tags = {
+    Environment = "example"
+    ManagedBy   = "Terraform"
+  }
+
+  frontend_ip_configuration {
+    name                 = "example-frontend-ip"
+    public_ip_address_id = azurerm_public_ip.example.id
+  }
+}
+
+resource "azurerm_lb_backend_address_pool" "example" {
+  name            = var.backend_pool_name
+  loadbalancer_id = azurerm_lb.example.id
+  tags = {
+    Environment = "example"
+    ManagedBy   = "Terraform"
+  }
+}
+
+resource "azurerm_lb_probe" "example" {
+  name                = var.health_probe_name
+  loadbalancer_id     = azurerm_lb.example.id
+  protocol            = var.health_probe_protocol
+  port                = var.health_probe_port
+  interval_in_seconds = var.health_probe_interval
+  number_of_probes    = var.health_probe_unhealthy_threshold
+  tags = {
+    Environment = "example"
+    ManagedBy   = "Terraform"
+  }
+}
+
+output "resource_group_id" {
+  value = azurerm_resource_group.example.id
+}
+
+output "public_ip_address" {
+  value = azurerm_public_ip.example.ip_address
+}
+
+output "load_balancer_id" {
+  value = azurerm_lb.example.id
+}
+
+output "backend_pool_id" {
+  value = azurerm_lb_backend_address_pool.example.id
+}
+
+output "health_probe_id" {
+  value = azurerm_lb_probe.example.id
+}

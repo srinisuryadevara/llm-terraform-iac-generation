@@ -1,0 +1,112 @@
+# Configure the AWS Provider
+provider "aws" {
+  region = var.aws_region
+}
+
+# Configure the Azure Provider
+provider "azurerm" {
+  features {}
+  subscription_id = var.azure_subscription_id
+  client_id       = var.azure_client_id
+  client_secret   = var.azure_client_secret
+  tenant_id       = var.azure_tenant_id
+}
+
+# Configure the GCP Provider
+provider "google" {
+  project = var.gcp_project
+  region  = var.gcp_region
+}
+
+# Create a secret in AWS Secrets Manager
+resource "aws_secretsmanager_secret" "aws_secret" {
+  name = var.aws_secret_name
+}
+
+# Create a secret in Azure Key Vault
+resource "azurerm_key_vault_secret" "azure_secret" {
+  name         = var.azure_secret_name
+  value        = var.azure_secret_value
+  key_vault_id = azurerm_key_vault.key_vault.id
+}
+
+# Create a Key Vault in Azure
+resource "azurerm_key_vault" "key_vault" {
+  name                        = var.azure_key_vault_name
+  location                    = var.azure_location
+  resource_group_name         = var.azure_resource_group_name
+  tenant_id                  = var.azure_tenant_id
+  sku_name                    = "standard"
+  soft_delete_retention_days = 7
+}
+
+# Create a secret in GCP Secret Manager
+resource "google_secret_manager_secret" "gcp_secret" {
+  secret_id = var.gcp_secret_name
+}
+
+# Create a secret version in GCP Secret Manager
+resource "google_secret_manager_secret_version" "gcp_secret_version" {
+  secret      = google_secret_manager_secret.gcp_secret.id
+  secret_data = var.gcp_secret_value
+}
+
+variable "aws_region" {
+  type = string
+}
+
+variable "aws_secret_name" {
+  type = string
+}
+
+variable "azure_subscription_id" {
+  type = string
+}
+
+variable "azure_client_id" {
+  type = string
+}
+
+variable "azure_client_secret" {
+  type = string
+}
+
+variable "azure_tenant_id" {
+  type = string
+}
+
+variable "azure_secret_name" {
+  type = string
+}
+
+variable "azure_secret_value" {
+  type = string
+}
+
+variable "azure_key_vault_name" {
+  type = string
+}
+
+variable "azure_location" {
+  type = string
+}
+
+variable "azure_resource_group_name" {
+  type = string
+}
+
+variable "gcp_project" {
+  type = string
+}
+
+variable "gcp_region" {
+  type = string
+}
+
+variable "gcp_secret_name" {
+  type = string
+}
+
+variable "gcp_secret_value" {
+  type = string
+}

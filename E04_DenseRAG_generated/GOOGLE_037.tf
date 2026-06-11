@@ -1,0 +1,134 @@
+variable "project_id" {
+  type        = string
+  description = "The ID of the project to create the VPN gateway in"
+}
+
+variable "region" {
+  type        = string
+  description = "The region to create the VPN gateway in"
+}
+
+variable "network_name" {
+  type        = string
+  description = "The name of the network to create the VPN gateway in"
+}
+
+variable "vpn_gateway_name" {
+  type        = string
+  description = "The name of the VPN gateway"
+}
+
+variable "tunnel_name" {
+  type        = string
+  description = "The name of the VPN tunnel"
+}
+
+variable "bgp_session_name" {
+  type        = string
+  description = "The name of the BGP session"
+}
+
+variable "peer_ip_address" {
+  type        = string
+  description = "The IP address of the peer VPN gateway"
+}
+
+variable "bgp_peer_asn" {
+  type        = number
+  description = "The ASN of the peer VPN gateway"
+}
+
+variable "bgp_session_range" {
+  type        = string
+  description = "The IP range for the BGP session"
+}
+
+resource "google_compute_network" "network" {
+  name                    = var.network_name
+  auto_create_subnetworks = false
+}
+
+resource "google_compute_subnetwork" "subnetwork" {
+  name          = "vpn-subnetwork"
+  ip_cidr_range = "10.0.0.0/24"
+  network       = google_compute_network.network.name
+  region        = var.region
+}
+
+resource "google_compute_address" "vpn_ip" {
+  name   = "vpn-ip"
+  region = var.region
+}
+
+resource "google_compute_vpn_gateway" "vpn_gateway" {
+  name    = var.vpn_gateway_name
+  network = google_compute_network.network.self_link
+  region  = var.region
+}
+
+resource "google_compute_forwarding_rule" "fr_esp" {
+  name        = "fr-esp"
+  ip_protocol = "ESP"
+  ip_address  = google_compute_address.vpn_ip.address
+  target      = google_compute_vpn_gateway.vpn_gateway.self_link
+}
+
+resource "google_compute_forwarding_rule" "fr_udp500" {
+  name        = "fr-udp500"
+  ip_protocol = "UDP"
+  port_range  = "500-500"
+  ip_address  = google_compute_address.vpn_ip.address
+  target      = google_compute_vpn_gateway.vpn_gateway.self_link
+}
+
+resource "google_compute_forwarding_rule" "fr_udp4500" {
+  name        = "fr-udp4500"
+  ip_protocol = "UDP"
+  port_range  = "4500-4500"
+  ip_address  = google_compute_address.vpn_ip.address
+  target      = google_compute_vpn_gateway.vpn_gateway.self_link
+}
+
+resource "google_compute_vpn_tunnel" "vpn_tunnel" {
+  name                  = var.tunnel_name
+  region                = var.region
+  vpn_gateway           = google_compute_vpn_gateway.vpn_gateway.self_link
+  peer_ip               = var.peer_ip_address
+  shared_secret         = "secret"
+  ike_version           = 2
+  target_vpn_gateway    = google_compute_vpn_gateway.vpn_gateway.self_link
+  local_traffic_selector = ["0.0.0.0/0"]
+  remote_traffic_selector = ["0.0.0.0/0"]
+}
+
+resource "google_compute_external_vpn_gateway" "external_vpn_gateway" {
+  name            = "external-vpn-gateway"
+  redundancy_type = "SINGLE_IP_INTERNALLY_REDUNDANT"
+  interfaces {
+    ip_address = var.peer_ip_address
+  }
+}
+
+resource "google_compute_router" "router" {
+  name    = "vpn-router"
+  region  = var.region
+  network = google_compute_network.network.self_link
+}
+
+resource "google_compute_router_interface" "router_interface" {
+  name       = "vpn-router-interface"
+  router     = google_compute_router.router.name
+  region     = var.region
+  ip_range   = var.bgp_session_range
+  vpn_tunnel = google_compute_vpn_tunnel.vpn_tunnel.self_link
+}
+
+resource "google_compute_router_peer" "router_peer" {
+  name                      = var.bgp_session_name
+  router                    = google_compute_router.router.name
+  region                    = var.region
+  peer_ip_address           = var.peer_ip_address
+  peer_asn                  = var.bgp_peer_asn
+  advertised_route_priority = 100
+  interface                 = google_compute_router_interface.router_interface.name
+}

@@ -1,0 +1,25 @@
+LJMU Thesis – Terraform Generation Experiment Comparison
+Generated : 2026-06-10 20:08:08
+Model     : LLaMA 3.3 70B via api.together.ai
+Samples   : 300  |  RAG: ChromaDB (dense) + BM25 (sparse)
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Rank  ID    Experiment Name                  HCL Syntax %   Format Pass %  Validation %   Provider %     Coverage %     Dependency %   Sec Issues ↓   Secrets ↓      Best-Practice  Similarity %   Score/100  
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+1     E09   Validation Feedback Repair       1.0000         1.0000         1.0000         1.0000         0.8933         0.9987         0.1200         0.0000         0.7075         0.0924             95.34
+2     E08   Security-Aware Generation        0.9867         1.0000         0.9867         1.0000         0.9117         0.9867         0.3300         0.0100         0.6008         0.0934             93.81
+3     E03   Few-Shot TerraDS Prompting       1.0000         1.0000         1.0000         1.0000         0.8933         0.9680         0.2067         0.0067         0.4696         0.0000             92.56
+4     E06   Hybrid RAG                       0.9967         1.0000         0.9867         1.0000         0.9117         0.9772         0.1600         0.0033         0.4512         0.1193             92.55
+5     E04   Dense RAG                        1.0000         1.0000         0.9933         1.0000         0.9100         0.9638         0.1467         0.0100         0.4496         0.1204             92.53
+6     E07   Dependency-Aware RAG             0.9967         1.0000         0.9967         1.0000         0.9133         0.9822         0.2433         0.0167         0.4317         0.1182             92.48
+7     E05   Sparse BM25 RAG                  0.9933         0.9900         0.9900         0.9983         0.8900         0.9671         0.1533         0.0133         0.4621         0.1179             92.10
+8     E02   Provider-Specific Prompting      1.0000         1.0000         1.0000         1.0000         0.8933         0.9728         0.1733         0.0000         0.4037         0.0000             91.99
+9     E01   Zero-Shot Baseline               0.9967         1.0000         0.9967         1.0000         0.8867         0.9800         0.2133         0.0100         0.4133         0.0000             91.91
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Notes:
+  All % metrics: higher is better  |  Sec Issues & Secrets: lower is better (↓)
+  Final Score: weighted composite 0–100 per thesis scoring logic
+
+Weights: HCL Syntax 15% | Format 10% | Validation 15% | Provider 15%
+         Coverage 15% | Dependency 10% | Best-Practice 10%
+         Security Reduction 5% | Secret Reduction 5%

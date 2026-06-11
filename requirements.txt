@@ -1,0 +1,23 @@
+# LJMU Thesis – Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Together AI (OpenAI-compatible) LLM API
+openai>=1.0.0
+
+# ChromaDB vector store (RAG experiments E04, E06, E07)
+chromadb>=0.5.0
+
+# Local sentence embedding model (used by ChromaDB)
+sentence-transformers>=2.7.0
+
+# Environment variable loading
+python-dotenv>=1.0.0
+
+# Progress bars
+tqdm>=4.66.0
+
+# Data handling (used in dataset loader & results)
+pandas>=2.0.0
+
+# (Optional) Gemini SDK – available for future use
+google-generativeai>=0.7.0

@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "AZURERM_057",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Storage Account with blob containers and private access only."
+  },
+  {
+    "id": "MULTI_023",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a compute instance on AWS (EC2), Azure (Linux VM), and GCP (Compute Engine) using separate provider blocks."
+  },
+  {
+    "id": "AWS_060",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS KMS key with an alias and key policy."
+  },
+  {
+    "id": "AZURERM_058",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Service Bus namespace with a queue and topic."
+  },
+  {
+    "id": "GOOGLE_051",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Storage bucket with uniform bucket-level access and no public access."
+  },
+  {
+    "id": "AZURERM_047",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Function App with a storage account and consumption plan."
+  },
+  {
+    "id": "GOOGLE_032",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Load Balancer with a backend service, URL map, and health check."
+  },
+  {
+    "id": "SECURITY_021",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an S3 bucket that blocks all public access, uses KMS encryption, and stores the KMS key ARN in a variable."
+  },
+  {
+    "id": "AZURERM_007",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Key Vault with access policies and secret storage."
+  },
+  {
+    "id": "AWS_004",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS IAM role with a least-privilege policy for S3 read access."
+  },
+  {
+    "id": "AWS_055",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an EC2 instance with an attached security group and placement inside an existing subnet."
+  },
+  {
+    "id": "AZURERM_072",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Linux virtual machine with a network interface, public IP, and SSH key."
+  },
+  {
+    "id": "GOOGLE_003",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Storage bucket with uniform bucket-level access and no public access."
+  },
+  {
+    "id": "AZURERM_001",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure SQL Server and SQL Database with firewall rules."
+  },
+  {
+    "id": "AZURERM_022",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Load Balancer with a backend pool and health probe."
+  },
+  {
+    "id": "GOOGLE_045",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Run service with traffic split and IAM binding."
+  },
+  {
+    "id": "AZURERM_045",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Virtual Machine Scale Set with autoscaling."
+  },
+  {
+    "id": "AZURERM_053",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Bastion Host and associated public IP."
+  },
+  {
+    "id": "GOOGLE_055",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Secret Manager secret with IAM binding."
+  },
+  {
+    "id": "AZURERM_024",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Load Balancer with a backend pool and health probe."
+  },
+  {
+    "id": "DEPENDENCY_007",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS ALB listener. The ALB ARN and target group ARN must both reference declared Terraform resources."
+  },
+  {
+    "id": "AZURERM_064",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Linux virtual machine with a network interface, public IP, and SSH key."
+  },
+  {
+    "id": "GOOGLE_006",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for GCP IAM service account bindings with minimal required roles."
+  },
+  {
+    "id": "AZURERM_066",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Cosmos DB account with a SQL database and container."
+  },
+  {
+    "id": "GOOGLE_068",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Dataflow job with a staging bucket and service account."
+  },
+  {
+    "id": "GOOGLE_039",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Spanner instance and database with IAM roles."
+  },
+  {
+    "id": "AZURERM_041",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Service Bus namespace with a queue and topic."
+  },
+  {
+    "id": "AZURERM_032",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure App Service plan and Web App with application settings."
+  },
+  {
+    "id": "GOOGLE_029",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud SQL PostgreSQL instance with private IP and backup configuration."
+  },
+  {
+    "id": "DEPENDENCY_020",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure AKS cluster with a node pool. Resource group and subnet must be referenced from declared resources."
+  },
+  {
+    "id": "DEPENDENCY_019",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS EKS node group. The cluster name and subnet IDs must reference existing aws_eks_cluster and aws_subnet resources."
+  },
+  {
+    "id": "SECURITY_019",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Storage Account with HTTPS-only traffic, no public blob access, and TLS 1.2 minimum."
+  },
+  {
+    "id": "GOOGLE_037",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP VPN gateway with a tunnel and BGP session."
+  },
+  {
+    "id": "AWS_002",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS KMS key with an alias and key policy."
+  },
+  {
+    "id": "AZURERM_073",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Virtual Machine Scale Set with autoscaling."
+  },
+  {
+    "id": "AWS_013",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Secrets Manager secret with a rotation policy."
+  },
+  {
+    "id": "SECURITY_016",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a least-privilege IAM policy for an AWS Lambda function with only required S3 read permissions."
+  },
+  {
+    "id": "GOOGLE_035",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Managed Instance Group with autoscaling and health check."
+  },
+  {
+    "id": "AZURERM_009",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure SQL Server and SQL Database with firewall rules."
+  },
+  {
+    "id": "MULTI_004",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL to create object storage across AWS S3, Azure Storage Account, and GCP Cloud Storage using separate provider blocks."
+  },
+  {
+    "id": "AWS_022",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL to create an AWS VPC with public and private subnets, an internet gateway, route tables, and security groups."
+  },
+  {
+    "id": "DEPENDENCY_012",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP GKE node pool. It must reference the parent google_container_cluster resource by name."
+  },
+  {
+    "id": "AZURERM_014",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Storage Account with blob containers and private access only."
+  },
+  {
+    "id": "AZURERM_033",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure App Service plan and Web App with application settings."
+  },
+  {
+    "id": "AZURERM_012",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure resource group, virtual network, subnet, and network security group."
+  },
+  {
+    "id": "AWS_019",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS RDS MySQL instance inside a private subnet with a security group."
+  },
+  {
+    "id": "AZURERM_029",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure resource group, virtual network, subnet, and network security group."
+  },
+  {
+    "id": "AZURERM_074",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure PostgreSQL Flexible Server with a private DNS zone."
+  },
+  {
+    "id": "MULTI_008",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a compute instance on AWS (EC2), Azure (Linux VM), and GCP (Compute Engine) using separate provider blocks."
+  },
+  {
+    "id": "AWS_048",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS CloudFront distribution backed by an S3 bucket with OAI."
+  },
+  {
+    "id": "MULTI_022",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL to create object storage across AWS S3, Azure Storage Account, and GCP Cloud Storage using separate provider blocks."
+  },
+  {
+    "id": "AWS_031",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS EKS cluster with a managed node group and required IAM roles."
+  },
+  {
+    "id": "GOOGLE_046",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Managed Instance Group with autoscaling and health check."
+  },
+  {
+    "id": "AZURERM_044",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Storage Account with blob containers and private access only."
+  },
+  {
+    "id": "AWS_044",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Route 53 hosted zone with A and CNAME records."
+  },
+  {
+    "id": "AZURERM_071",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Container Registry with admin access disabled."
+  },
+  {
+    "id": "GOOGLE_036",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP VPC network with subnets, firewall rules, and Cloud Router."
+  },
+  {
+    "id": "GOOGLE_074",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Artifact Registry repository with IAM binding."
+  },
+  {
+    "id": "DEPENDENCY_001",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS Lambda function with an IAM role. The role ARN must reference the aws_iam_role resource."
+  },
+  {
+    "id": "GOOGLE_028",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Memorystore Redis instance inside a private VPC."
+  },
+  {
+    "id": "AZURERM_025",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Linux virtual machine with a network interface, public IP, and SSH key."
+  },
+  {
+    "id": "GOOGLE_015",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Functions function with an HTTP trigger and service account."
+  },
+  {
+    "id": "AWS_051",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an EC2 instance with an attached security group and placement inside an existing subnet."
+  },
+  {
+    "id": "GOOGLE_059",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Pub/Sub topic and subscription with IAM permissions."
+  },
+  {
+    "id": "GOOGLE_017",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Artifact Registry repository with IAM binding."
+  },
+  {
+    "id": "AWS_037",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS EKS cluster with a managed node group and required IAM roles."
+  },
+  {
+    "id": "GOOGLE_069",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Memorystore Redis instance inside a private VPC."
+  },
+  {
+    "id": "GOOGLE_042",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud SQL PostgreSQL instance with private IP and backup configuration."
+  },
+  {
+    "id": "GOOGLE_062",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for GCP IAM service account bindings with minimal required roles."
+  },
+  {
+    "id": "AZURERM_008",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Event Hub namespace with an event hub and consumer group."
+  },
+  {
+    "id": "SECURITY_023",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Key Vault with soft delete, purge protection enabled, and RBAC authorisation."
+  },
+  {
+    "id": "AWS_049",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Secrets Manager secret with a rotation policy."
+  },
+  {
+    "id": "GOOGLE_019",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Secret Manager secret with IAM binding."
+  },
+  {
+    "id": "SECURITY_014",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Storage bucket with no public access and a lifecycle rule using variables."
+  },
+  {
+    "id": "AWS_017",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS CloudFront distribution backed by an S3 bucket with OAI."
+  },
+  {
+    "id": "GOOGLE_052",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Load Balancer with a backend service, URL map, and health check."
+  },
+  {
+    "id": "SECURITY_024",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS CloudTrail with S3 logging, log file validation enabled, and KMS encryption."
+  },
+  {
+    "id": "AZURERM_070",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure API Management instance with a product and API."
+  },
+  {
+    "id": "GOOGLE_010",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Armor security policy attached to a backend service."
+  },
+  {
+    "id": "GOOGLE_063",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP GKE cluster with a node pool and network policy enabled."
+  },
+  {
+    "id": "SECURITY_012",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Key Vault with soft delete, purge protection enabled, and RBAC authorisation."
+  },
+  {
+    "id": "MULTI_012",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for secret management on AWS (Secrets Manager), Azure (Key Vault), and GCP (Secret Manager)."
+  },
+  {
+    "id": "GOOGLE_033",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Load Balancer with a backend service, URL map, and health check."
+  },
+  {
+    "id": "AWS_016",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS CloudFront distribution backed by an S3 bucket with OAI."
+  },
+  {
+    "id": "AZURERM_054",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure AKS cluster with a default node pool and managed identity."
+  },
+  {
+    "id": "GOOGLE_058",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP BigQuery dataset and table with access controls."
+  },
+  {
+    "id": "DEPENDENCY_025",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Linux VM. All dependencies (resource group, vnet, subnet, NIC) must be declared and referenced using resource attributes."
+  },
+  {
+    "id": "AWS_043",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an EC2 instance with an attached security group and placement inside an existing subnet."
+  },
+  {
+    "id": "AZURERM_040",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Application Gateway with WAF policy and backend pool."
+  },
+  {
+    "id": "AWS_009",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS RDS MySQL instance inside a private subnet with a security group."
+  },
+  {
+    "id": "AZURERM_027",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Application Gateway with WAF policy and backend pool."
+  },
+  {
+    "id": "AWS_047",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL to create an AWS VPC with public and private subnets, an internet gateway, route tables, and security groups."
+  },
+  {
+    "id": "DEPENDENCY_016",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Linux VM. All dependencies (resource group, vnet, subnet, NIC) must be declared and referenced using resource attributes."
+  },
+  {
+    "id": "GOOGLE_067",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Artifact Registry repository with IAM binding."
+  },
+  {
+    "id": "DEPENDENCY_008",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Run service. The service account must reference a declared google_service_account resource."
+  },
+  {
+    "id": "GOOGLE_030",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud DNS managed zone with A and CNAME records."
+  },
+  {
+    "id": "AZURERM_018",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Service Bus namespace with a queue and topic."
+  },
+  {
+    "id": "MULTI_017",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a serverless function on AWS (Lambda), Azure (Function App), and GCP (Cloud Functions)."
+  },
+  {
+    "id": "DEPENDENCY_023",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Compute instance. Network and subnetwork must reference google_compute_network and google_compute_subnetwork resources."
+  },
+  {
+    "id": "AWS_067",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Auto Scaling group with a launch template and scaling policies."
+  },
+  {
+    "id": "GOOGLE_050",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP GKE cluster with a node pool and network policy enabled."
+  },
+  {
+    "id": "DEPENDENCY_022",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS EC2 instance. Ensure subnet_id and vpc_security_group_ids use Terraform resource references, not hardcoded IDs."
+  },
+  {
+    "id": "GOOGLE_016",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Load Balancer with a backend service, URL map, and health check."
+  },
+  {
+    "id": "AWS_006",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS DynamoDB table with GSI, point-in-time recovery, and encryption."
+  },
+  {
+    "id": "GOOGLE_025",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Functions function with an HTTP trigger and service account."
+  },
+  {
+    "id": "AWS_025",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS CodePipeline with S3 artifact store and IAM roles."
+  },
+  {
+    "id": "AWS_074",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS RDS MySQL instance inside a private subnet with a security group."
+  },
+  {
+    "id": "AZURERM_063",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Cosmos DB account with a SQL database and container."
+  },
+  {
+    "id": "DEPENDENCY_002",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Run service. The service account must reference a declared google_service_account resource."
+  },
+  {
+    "id": "AWS_066",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Application Load Balancer with target groups and listener rules."
+  },
+  {
+    "id": "SECURITY_002",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Storage Account with HTTPS-only traffic, no public blob access, and TLS 1.2 minimum."
+  },
+  {
+    "id": "AZURERM_042",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Virtual Machine Scale Set with autoscaling."
+  },
+  {
+    "id": "GOOGLE_001",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Dataflow job with a staging bucket and service account."
+  },
+  {
+    "id": "AZURERM_026",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure SQL Server and SQL Database with firewall rules."
+  },
+  {
+    "id": "GOOGLE_022",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Compute Engine instance with a network interface and firewall tag."
+  },
+  {
+    "id": "AWS_045",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ECS Fargate service with a task definition and ALB integration."
+  },
+  {
+    "id": "AWS_056",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS EKS cluster with a managed node group and required IAM roles."
+  },
+  {
+    "id": "MULTI_005",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a virtual network on AWS (VPC), Azure (VNet), and GCP (VPC Network) with subnets."
+  },
+  {
+    "id": "GOOGLE_056",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Functions function with an HTTP trigger and service account."
+  },
+  {
+    "id": "SECURITY_010",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure NSG that denies all inbound traffic except port 443, with no hardcoded credentials."
+  },
+  {
+    "id": "AZURERM_049",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure AKS cluster with a default node pool and managed identity."
+  },
+  {
+    "id": "AWS_075",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Auto Scaling group with a launch template and scaling policies."
+  },
+  {
+    "id": "AWS_023",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SQS queue with a dead-letter queue and access policy."
+  },
+  {
+    "id": "GOOGLE_047",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Compute Engine instance with a network interface and firewall tag."
+  },
+  {
+    "id": "AZURERM_050",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Application Gateway with WAF policy and backend pool."
+  },
+  {
+    "id": "MULTI_018",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for DNS zones on AWS (Route 53), Azure (DNS Zone), and GCP (Cloud DNS)."
+  },
+  {
+    "id": "AWS_015",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS NAT Gateway attached to a public subnet."
+  },
+  {
+    "id": "AWS_008",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL to create an AWS VPC with public and private subnets, an internet gateway, route tables, and security groups."
+  },
+  {
+    "id": "SECURITY_009",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Storage bucket with no public access and a lifecycle rule using variables."
+  },
+  {
+    "id": "AZURERM_062",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Virtual Machine Scale Set with autoscaling."
+  },
+  {
+    "id": "AZURERM_056",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure API Management instance with a product and API."
+  },
+  {
+    "id": "AZURERM_068",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Event Hub namespace with an event hub and consumer group."
+  },
+  {
+    "id": "AZURERM_060",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure App Service plan and Web App with application settings."
+  },
+  {
+    "id": "MULTI_024",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a virtual network on AWS (VPC), Azure (VNet), and GCP (VPC Network) with subnets."
+  },
+  {
+    "id": "AWS_072",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SQS queue with a dead-letter queue and access policy."
+  },
+  {
+    "id": "AZURERM_010",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Service Bus namespace with a queue and topic."
+  },
+  {
+    "id": "AZURERM_028",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Bastion Host and associated public IP."
+  },
+  {
+    "id": "AWS_050",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ElastiCache Redis cluster inside a private subnet."
+  },
+  {
+    "id": "MULTI_013",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a compute instance on AWS (EC2), Azure (Linux VM), and GCP (Compute Engine) using separate provider blocks."
+  },
+  {
+    "id": "AWS_058",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SNS topic with an email subscription."
+  },
+  {
+    "id": "AWS_059",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an EC2 instance with an attached security group and placement inside an existing subnet."
+  },
+  {
+    "id": "GOOGLE_023",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Armor security policy attached to a backend service."
+  },
+  {
+    "id": "SECURITY_001",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP GKE cluster with private nodes, master authorised networks, and Workload Identity enabled."
+  },
+  {
+    "id": "AZURERM_043",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Key Vault with access policies and secret storage."
+  },
+  {
+    "id": "DEPENDENCY_014",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure AKS cluster with a node pool. Resource group and subnet must be referenced from declared resources."
+  },
+  {
+    "id": "AWS_057",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SNS topic with an email subscription."
+  },
+  {
+    "id": "DEPENDENCY_005",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Application Gateway. All dependent resources must be wired through Terraform resource references."
+  },
+  {
+    "id": "GOOGLE_043",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Dataflow job with a staging bucket and service account."
+  },
+  {
+    "id": "DEPENDENCY_024",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS EKS node group. The cluster name and subnet IDs must reference existing aws_eks_cluster and aws_subnet resources."
+  },
+  {
+    "id": "GOOGLE_073",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP VPC network with subnets, firewall rules, and Cloud Router."
+  },
+  {
+    "id": "MULTI_019",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a managed relational database on AWS (RDS), Azure (SQL Database), and GCP (Cloud SQL)."
+  },
+  {
+    "id": "AWS_069",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ECS Fargate service with a task definition and ALB integration."
+  },
+  {
+    "id": "MULTI_011",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a virtual network on AWS (VPC), Azure (VNet), and GCP (VPC Network) with subnets."
+  },
+  {
+    "id": "GOOGLE_008",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Storage bucket with uniform bucket-level access and no public access."
+  },
+  {
+    "id": "GOOGLE_049",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP VPN gateway with a tunnel and BGP session."
+  },
+  {
+    "id": "GOOGLE_054",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP BigQuery dataset and table with access controls."
+  },
+  {
+    "id": "AWS_007",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SQS queue with a dead-letter queue and access policy."
+  },
+  {
+    "id": "AZURERM_031",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Load Balancer with a backend pool and health probe."
+  },
+  {
+    "id": "AWS_046",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ElastiCache Redis cluster inside a private subnet."
+  },
+  {
+    "id": "GOOGLE_044",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud SQL PostgreSQL instance with private IP and backup configuration."
+  },
+  {
+    "id": "AWS_061",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SNS topic with an email subscription."
+  },
+  {
+    "id": "GOOGLE_070",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Storage bucket with uniform bucket-level access and no public access."
+  },
+  {
+    "id": "GOOGLE_009",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP VPN gateway with a tunnel and BGP session."
+  },
+  {
+    "id": "SECURITY_020",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP firewall rule restricting SSH to a specific CIDR range, disallowing 0.0.0.0/0."
+  },
+  {
+    "id": "GOOGLE_038",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Memorystore Redis instance inside a private VPC."
+  },
+  {
+    "id": "AZURERM_016",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Monitor Log Analytics workspace with diagnostic settings."
+  },
+  {
+    "id": "MULTI_003",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a serverless function on AWS (Lambda), Azure (Function App), and GCP (Cloud Functions)."
+  },
+  {
+    "id": "AWS_064",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Route 53 hosted zone with A and CNAME records."
+  },
+  {
+    "id": "GOOGLE_066",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for GCP IAM service account bindings with minimal required roles."
+  },
+  {
+    "id": "AZURERM_017",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Bastion Host and associated public IP."
+  },
+  {
+    "id": "GOOGLE_024",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Pub/Sub topic and subscription with IAM permissions."
+  },
+  {
+    "id": "AZURERM_019",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure PostgreSQL Flexible Server with a private DNS zone."
+  },
+  {
+    "id": "AZURERM_004",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure API Management instance with a product and API."
+  },
+  {
+    "id": "AWS_011",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS NAT Gateway attached to a public subnet."
+  },
+  {
+    "id": "AWS_033",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ECS Fargate service with a task definition and ALB integration."
+  },
+  {
+    "id": "AZURERM_036",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure AKS cluster with a default node pool and managed identity."
+  },
+  {
+    "id": "SECURITY_007",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an S3 bucket that blocks all public access, uses KMS encryption, and stores the KMS key ARN in a variable."
+  },
+  {
+    "id": "GOOGLE_072",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Dataflow job with a staging bucket and service account."
+  },
+  {
+    "id": "AZURERM_075",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Key Vault with access policies and secret storage."
+  },
+  {
+    "id": "MULTI_021",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a managed Kubernetes cluster on AWS (EKS), Azure (AKS), and GCP (GKE)."
+  },
+  {
+    "id": "AWS_010",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS DynamoDB table with GSI, point-in-time recovery, and encryption."
+  },
+  {
+    "id": "MULTI_016",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a CDN setup on AWS (CloudFront), Azure (CDN), and GCP (Cloud CDN)."
+  },
+  {
+    "id": "AWS_039",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an S3 bucket with versioning enabled, server-side encryption, and blocked public access."
+  },
+  {
+    "id": "GOOGLE_027",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Pub/Sub topic and subscription with IAM permissions."
+  },
+  {
+    "id": "AWS_020",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS DynamoDB table with GSI, point-in-time recovery, and encryption."
+  },
+  {
+    "id": "AWS_029",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS RDS MySQL instance inside a private subnet with a security group."
+  },
+  {
+    "id": "MULTI_009",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a managed Kubernetes cluster on AWS (EKS), Azure (AKS), and GCP (GKE)."
+  },
+  {
+    "id": "AZURERM_069",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure resource group, virtual network, subnet, and network security group."
+  },
+  {
+    "id": "SECURITY_006",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure NSG that denies all inbound traffic except port 443, with no hardcoded credentials."
+  },
+  {
+    "id": "MULTI_015",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a message queue on AWS (SQS), Azure (Service Bus Queue), and GCP (Pub/Sub)."
+  },
+  {
+    "id": "GOOGLE_071",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud SQL PostgreSQL instance with private IP and backup configuration."
+  },
+  {
+    "id": "AZURERM_039",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Container Registry with admin access disabled."
+  },
+  {
+    "id": "GOOGLE_040",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for GCP IAM service account bindings with minimal required roles."
+  },
+  {
+    "id": "SECURITY_025",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure SQL Server with Azure AD authentication and no SQL login allowed."
+  },
+  {
+    "id": "MULTI_007",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for secret management on AWS (Secrets Manager), Azure (Key Vault), and GCP (Secret Manager)."
+  },
+  {
+    "id": "GOOGLE_014",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud DNS managed zone with A and CNAME records."
+  },
+  {
+    "id": "SECURITY_003",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a least-privilege IAM policy for an AWS Lambda function with only required S3 read permissions."
+  },
+  {
+    "id": "GOOGLE_048",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP GKE cluster with a node pool and network policy enabled."
+  },
+  {
+    "id": "AZURERM_011",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Function App with a storage account and consumption plan."
+  },
+  {
+    "id": "AWS_001",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Lambda function with an IAM execution role and CloudWatch log group."
+  },
+  {
+    "id": "AWS_012",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS EKS cluster with a managed node group and required IAM roles."
+  },
+  {
+    "id": "AWS_071",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS IAM role with a least-privilege policy for S3 read access."
+  },
+  {
+    "id": "AZURERM_034",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Load Balancer with a backend pool and health probe."
+  },
+  {
+    "id": "GOOGLE_061",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Memorystore Redis instance inside a private VPC."
+  },
+  {
+    "id": "AWS_024",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an S3 bucket with versioning enabled, server-side encryption, and blocked public access."
+  },
+  {
+    "id": "AWS_014",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ElastiCache Redis cluster inside a private subnet."
+  },
+  {
+    "id": "AWS_065",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ECS Fargate service with a task definition and ALB integration."
+  },
+  {
+    "id": "AZURERM_051",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Cosmos DB account with a SQL database and container."
+  },
+  {
+    "id": "SECURITY_005",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP firewall rule restricting SSH to a specific CIDR range, disallowing 0.0.0.0/0."
+  },
+  {
+    "id": "MULTI_002",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a managed relational database on AWS (RDS), Azure (SQL Database), and GCP (Cloud SQL)."
+  },
+  {
+    "id": "GOOGLE_013",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Armor security policy attached to a backend service."
+  },
+  {
+    "id": "GOOGLE_026",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Functions function with an HTTP trigger and service account."
+  },
+  {
+    "id": "AWS_053",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Auto Scaling group with a launch template and scaling policies."
+  },
+  {
+    "id": "AZURERM_013",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Cosmos DB account with a SQL database and container."
+  },
+  {
+    "id": "GOOGLE_034",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud DNS managed zone with A and CNAME records."
+  },
+  {
+    "id": "AWS_054",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Application Load Balancer with target groups and listener rules."
+  },
+  {
+    "id": "GOOGLE_005",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Run service with traffic split and IAM binding."
+  },
+  {
+    "id": "DEPENDENCY_015",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS RDS instance inside a DB subnet group. The subnet group must reference actual aws_subnet resources."
+  },
+  {
+    "id": "AWS_070",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Secrets Manager secret with a rotation policy."
+  },
+  {
+    "id": "AWS_040",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an S3 bucket with versioning enabled, server-side encryption, and blocked public access."
+  },
+  {
+    "id": "MULTI_006",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a managed relational database on AWS (RDS), Azure (SQL Database), and GCP (Cloud SQL)."
+  },
+  {
+    "id": "GOOGLE_041",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Spanner instance and database with IAM roles."
+  },
+  {
+    "id": "AWS_028",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS ElastiCache Redis cluster inside a private subnet."
+  },
+  {
+    "id": "DEPENDENCY_011",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS Lambda function with an IAM role. The role ARN must reference the aws_iam_role resource."
+  },
+  {
+    "id": "SECURITY_004",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS security group allowing only HTTPS (443) inbound, blocking SSH (22), using variables for CIDR values."
+  },
+  {
+    "id": "DEPENDENCY_006",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Private Endpoint. The subnet ID and private connection resource ID must use resource references."
+  },
+  {
+    "id": "GOOGLE_075",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP VPC network with subnets, firewall rules, and Cloud Router."
+  },
+  {
+    "id": "AWS_027",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Lambda function with an IAM execution role and CloudWatch log group."
+  },
+  {
+    "id": "GOOGLE_020",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP BigQuery dataset and table with access controls."
+  },
+  {
+    "id": "AZURERM_002",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Function App with a storage account and consumption plan."
+  },
+  {
+    "id": "AZURERM_067",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Container Registry with admin access disabled."
+  },
+  {
+    "id": "GOOGLE_060",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Secret Manager secret with IAM binding."
+  },
+  {
+    "id": "GOOGLE_021",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Secret Manager secret with IAM binding."
+  },
+  {
+    "id": "AWS_003",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS CodePipeline with S3 artifact store and IAM roles."
+  },
+  {
+    "id": "SECURITY_017",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS EKS cluster with envelope encryption and private endpoint access only."
+  },
+  {
+    "id": "GOOGLE_018",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP VPC network with subnets, firewall rules, and Cloud Router."
+  },
+  {
+    "id": "DEPENDENCY_004",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS RDS instance inside a DB subnet group. The subnet group must reference actual aws_subnet resources."
+  },
+  {
+    "id": "GOOGLE_007",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Compute Engine instance with a network interface and firewall tag."
+  },
+  {
+    "id": "AZURERM_003",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure resource group, virtual network, subnet, and network security group."
+  },
+  {
+    "id": "GOOGLE_031",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Pub/Sub topic and subscription with IAM permissions."
+  },
+  {
+    "id": "AZURERM_065",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Container Registry with admin access disabled."
+  },
+  {
+    "id": "GOOGLE_064",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Spanner instance and database with IAM roles."
+  },
+  {
+    "id": "AZURERM_038",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure CDN profile and endpoint backed by a storage account."
+  },
+  {
+    "id": "AWS_041",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS CloudFront distribution backed by an S3 bucket with OAI."
+  },
+  {
+    "id": "AWS_073",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS NAT Gateway attached to a public subnet."
+  },
+  {
+    "id": "AZURERM_020",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Key Vault with access policies and secret storage."
+  },
+  {
+    "id": "AWS_063",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS IAM role with a least-privilege policy for S3 read access."
+  },
+  {
+    "id": "MULTI_025",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a message queue on AWS (SQS), Azure (Service Bus Queue), and GCP (Pub/Sub)."
+  },
+  {
+    "id": "AWS_018",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SNS topic with an email subscription."
+  },
+  {
+    "id": "MULTI_001",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a managed Kubernetes cluster on AWS (EKS), Azure (AKS), and GCP (GKE)."
+  },
+  {
+    "id": "AZURERM_015",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Monitor Log Analytics workspace with diagnostic settings."
+  },
+  {
+    "id": "MULTI_014",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL to create object storage across AWS S3, Azure Storage Account, and GCP Cloud Storage using separate provider blocks."
+  },
+  {
+    "id": "AWS_034",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an S3 bucket with versioning enabled, server-side encryption, and blocked public access."
+  },
+  {
+    "id": "SECURITY_015",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS security group allowing only HTTPS (443) inbound, blocking SSH (22), using variables for CIDR values."
+  },
+  {
+    "id": "AZURERM_055",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Function App with a storage account and consumption plan."
+  },
+  {
+    "id": "AZURERM_035",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Event Hub namespace with an event hub and consumer group."
+  },
+  {
+    "id": "DEPENDENCY_010",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Cloud SQL database. The instance must reference a declared google_sql_database_instance resource."
+  },
+  {
+    "id": "AWS_052",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Lambda function with an IAM execution role and CloudWatch log group."
+  },
+  {
+    "id": "SECURITY_013",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS RDS instance with encryption enabled, not publicly accessible, and credentials in variables."
+  },
+  {
+    "id": "AWS_005",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Route 53 hosted zone with A and CNAME records."
+  },
+  {
+    "id": "AWS_038",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Lambda function with an IAM execution role and CloudWatch log group."
+  },
+  {
+    "id": "DEPENDENCY_013",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP GKE node pool. It must reference the parent google_container_cluster resource by name."
+  },
+  {
+    "id": "MULTI_010",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for DNS zones on AWS (Route 53), Azure (DNS Zone), and GCP (Cloud DNS)."
+  },
+  {
+    "id": "GOOGLE_004",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Run service with traffic split and IAM binding."
+  },
+  {
+    "id": "AWS_068",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS SQS queue with a dead-letter queue and access policy."
+  },
+  {
+    "id": "GOOGLE_053",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Compute Engine instance with a network interface and firewall tag."
+  },
+  {
+    "id": "AZURERM_061",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Linux virtual machine with a network interface, public IP, and SSH key."
+  },
+  {
+    "id": "AZURERM_048",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure PostgreSQL Flexible Server with a private DNS zone."
+  },
+  {
+    "id": "DEPENDENCY_018",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS ECS service. The cluster ARN, task definition, and ALB target group must all use resource references."
+  },
+  {
+    "id": "AZURERM_030",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure CDN profile and endpoint backed by a storage account."
+  },
+  {
+    "id": "AZURERM_059",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure PostgreSQL Flexible Server with a private DNS zone."
+  },
+  {
+    "id": "GOOGLE_012",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP GKE cluster with a node pool and network policy enabled."
+  },
+  {
+    "id": "SECURITY_018",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Compute firewall that blocks all ingress except port 443 from a named IP range variable."
+  },
+  {
+    "id": "GOOGLE_065",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Run service with traffic split and IAM binding."
+  },
+  {
+    "id": "DEPENDENCY_009",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure SQL Database. The server name must reference a declared azurerm_sql_server resource."
+  },
+  {
+    "id": "AWS_021",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL to create an AWS VPC with public and private subnets, an internet gateway, route tables, and security groups."
+  },
+  {
+    "id": "AZURERM_052",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure SQL Server and SQL Database with firewall rules."
+  },
+  {
+    "id": "AWS_062",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Auto Scaling group with a launch template and scaling policies."
+  },
+  {
+    "id": "GOOGLE_057",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Cloud Armor security policy attached to a backend service."
+  },
+  {
+    "id": "AZURERM_046",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure App Service plan and Web App with application settings."
+  },
+  {
+    "id": "AWS_035",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS IAM role with a least-privilege policy for S3 read access."
+  },
+  {
+    "id": "AWS_036",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Application Load Balancer with target groups and listener rules."
+  },
+  {
+    "id": "AZURERM_021",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure AKS cluster with a default node pool and managed identity."
+  },
+  {
+    "id": "AWS_042",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Route 53 hosted zone with A and CNAME records."
+  },
+  {
+    "id": "SECURITY_011",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS RDS instance with encryption enabled, not publicly accessible, and credentials in variables."
+  },
+  {
+    "id": "DEPENDENCY_017",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS EC2 instance. Ensure subnet_id and vpc_security_group_ids use Terraform resource references, not hardcoded IDs."
+  },
+  {
+    "id": "AZURERM_006",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure API Management instance with a product and API."
+  },
+  {
+    "id": "SECURITY_022",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an AWS WAF WebACL with managed rule groups attached to an ALB."
+  },
+  {
+    "id": "SECURITY_008",
+    "category": "security",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP GKE cluster with private nodes, master authorised networks, and Workload Identity enabled."
+  },
+  {
+    "id": "MULTI_020",
+    "category": "multi",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a CDN setup on AWS (CloudFront), Azure (CDN), and GCP (Cloud CDN)."
+  },
+  {
+    "id": "AWS_026",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS Application Load Balancer with target groups and listener rules."
+  },
+  {
+    "id": "DEPENDENCY_021",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for a GCP Compute instance. Network and subnetwork must reference google_compute_network and google_compute_subnetwork resources."
+  },
+  {
+    "id": "GOOGLE_011",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP Managed Instance Group with autoscaling and health check."
+  },
+  {
+    "id": "AWS_032",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS CodePipeline with S3 artifact store and IAM roles."
+  },
+  {
+    "id": "DEPENDENCY_003",
+    "category": "dependency",
+    "provider": "multi",
+    "prompt": "Generate Terraform HCL for an Azure Application Gateway. All dependent resources must be wired through Terraform resource references."
+  },
+  {
+    "id": "AWS_030",
+    "category": "aws",
+    "provider": "aws",
+    "prompt": "Generate Terraform HCL for an AWS KMS key with an alias and key policy."
+  },
+  {
+    "id": "AZURERM_037",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure CDN profile and endpoint backed by a storage account."
+  },
+  {
+    "id": "GOOGLE_002",
+    "category": "google",
+    "provider": "google",
+    "prompt": "Generate Terraform HCL for a GCP BigQuery dataset and table with access controls."
+  },
+  {
+    "id": "AZURERM_023",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Storage Account with blob containers and private access only."
+  },
+  {
+    "id": "AZURERM_005",
+    "category": "azurerm",
+    "provider": "azurerm",
+    "prompt": "Generate Terraform HCL for an Azure Monitor Log Analytics workspace with diagnostic settings."
+  }
+]

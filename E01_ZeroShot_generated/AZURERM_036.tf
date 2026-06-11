@@ -1,0 +1,105 @@
+provider "azurerm" {
+  features {}
+}
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "cluster_name" {
+  type = string
+}
+
+variable "node_pool_name" {
+  type = string
+}
+
+variable "node_count" {
+  type = number
+}
+
+variable "vm_size" {
+  type = string
+}
+
+variable "kubernetes_version" {
+  type = string
+}
+
+variable "client_id" {
+  type      = string
+  sensitive = true
+}
+
+variable "client_secret" {
+  type      = string
+  sensitive = true
+}
+
+variable "tenant_id" {
+  type      = string
+  sensitive = true
+}
+
+variable "subscription_id" {
+  type      = string
+  sensitive = true
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = var.resource_group_name
+  location = var.location
+}
+
+resource "azurerm_kubernetes_cluster" "example" {
+  name                = var.cluster_name
+  location            = azurerm_resource_group.example.location
+  resource_group_name = azurerm_resource_group.example.name
+  dns_prefix          = var.cluster_name
+
+  default_node_pool {
+    name       = var.node_pool_name
+    node_count = var.node_count
+    vm_size    = var.vm_size
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  azure_active_directory_role_based_access_control {
+    managed = true
+  }
+}
+
+resource "azurerm_role_assignment" "example" {
+  scope                = azurerm_resource_group.example.id
+  role_definition_name = "Azure Kubernetes Service Cluster Admin Role"
+  principal_id          = azurerm_kubernetes_cluster.example.kubelet_identity.object_id
+}
+
+resource "azurerm_kubernetes_cluster_node_pool" "example" {
+  name                  = var.node_pool_name
+  kubernetes_cluster_id = azurerm_kubernetes_cluster.example.id
+  node_count            = var.node_count
+  vm_size               = var.vm_size
+}
+
+provider "azuread" {
+  client_id     = var.client_id
+  client_secret = var.client_secret
+  tenant_id     = var.tenant_id
+}
+
+provider "azurerm" {
+  alias                   = "aks"
+  client_id               = var.client_id
+  client_secret           = var.client_secret
+  tenant_id               = var.tenant_id
+  subscription_id         = var.subscription_id
+  features {}
+}

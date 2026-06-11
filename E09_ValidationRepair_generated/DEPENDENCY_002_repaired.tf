@@ -1,0 +1,57 @@
+provider "google" {
+  project = var.project_id
+  region  = var.region
+}
+
+variable "project_id" {
+  type = string
+}
+
+variable "region" {
+  type = string
+}
+
+variable "service_account_email" {
+  type = string
+}
+
+resource "google_service_account" "cloud_run_service_account" {
+  account_id = "cloud-run-service-account"
+  labels = {
+    environment = "production"
+    application = "cloud-run"
+  }
+}
+
+resource "google_service_account_key" "cloud_run_service_account_key" {
+  service_account_id = google_service_account.cloud_run_service_account.id
+  labels = {
+    environment = "production"
+    application = "cloud-run"
+  }
+}
+
+resource "google_cloud_run_service" "cloud_run_service" {
+  name     = "cloud-run-service"
+  location = var.region
+  labels = {
+    environment = "production"
+    application = "cloud-run"
+  }
+  template {
+    spec {
+      service_account_name = google_service_account.cloud_run_service_account.email
+      containers {
+        image = "gcr.io/cloudrun/hello"
+      }
+    }
+  }
+  traffic {
+    percent         = 100
+    latest_revision = true
+  }
+}
+
+output "cloud_run_service_url" {
+  value = google_cloud_run_service.cloud_run_service.status[0].url
+}

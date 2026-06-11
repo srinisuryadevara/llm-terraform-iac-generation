@@ -1,0 +1,25 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ChromaDB vector store (large, regenerable via build_chroma_index.py)
+chroma_db/
+
+# Extracted TerraDS archives (regenerable, lives in Data-Sets folder anyway)
+Data-Sets/
+
+# OS / editor junk
+.DS_Store
+.claude/
+
+# Leftover stray files from a botched pip install
+=*.0
+=*.0.0
+
+# Logs
+*.log

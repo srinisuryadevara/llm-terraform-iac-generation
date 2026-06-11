@@ -1,0 +1,117 @@
+provider "azurerm" {
+  version = "3.34.0"
+  features {}
+}
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "key_vault_name" {
+  type = string
+}
+
+variable "tenant_id" {
+  type = string
+  sensitive = true
+}
+
+variable "object_id" {
+  type = string
+  sensitive = true
+}
+
+variable "secret_name" {
+  type = string
+}
+
+variable "secret_value" {
+  type = string
+  sensitive = true
+}
+
+variable "environment" {
+  type = string
+  default = "dev"
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = var.resource_group_name
+  location = var.location
+  tags = {
+    Environment = var.environment
+  }
+}
+
+resource "azurerm_key_vault" "example" {
+  name                        = var.key_vault_name
+  location                    = azurerm_resource_group.example.location
+  resource_group_name         = azurerm_resource_group.example.name
+  tenant_id                   = var.tenant_id
+  sku_name                    = "standard"
+  soft_delete_retention_days  = 7
+  tags = {
+    Environment = var.environment
+  }
+}
+
+resource "azurerm_key_vault_access_policy" "example" {
+  key_vault_id = azurerm_key_vault.example.id
+  tenant_id    = var.tenant_id
+  object_id    = var.object_id
+
+  key_permissions = [
+    "Get",
+    "List",
+    "Create",
+    "Update",
+    "Delete",
+    "Recover",
+    "Backup",
+    "Restore",
+  ]
+
+  secret_permissions = [
+    "Get",
+    "List",
+    "Set",
+    "Delete",
+    "Recover",
+    "Backup",
+    "Restore",
+  ]
+}
+
+resource "azurerm_key_vault_secret" "example" {
+  name         = var.secret_name
+  value        = var.secret_value
+  key_vault_id = azurerm_key_vault.example.id
+}
+
+output "resource_group_id" {
+  value = azurerm_resource_group.example.id
+}
+
+output "key_vault_id" {
+  value = azurerm_key_vault.example.id
+}
+
+output "key_vault_name" {
+  value = azurerm_key_vault.example.name
+}
+
+output "key_vault_endpoint" {
+  value = azurerm_key_vault.example.vault_uri
+}
+
+output "secret_id" {
+  value = azurerm_key_vault_secret.example.id
+}
+
+output "secret_name" {
+  value = azurerm_key_vault_secret.example.name
+}
