@@ -32,8 +32,10 @@ if not USE_OLLAMA and not TOGETHER_API_KEY:
     )
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
-DATASET_PATH = "/Users/suryadevarachetansai/Desktop/LJMU_Thesis/Data-Sets/14217386/TerraDS"
-OUTPUT_DIR   = "/Users/suryadevarachetansai/Desktop/LJMU_Thesis/Coding/Code"
+# Base directory = the folder containing this file (i.e. the `code` directory)
+BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
+DATASET_PATH = os.path.join(BASE_DIR, "..", "..", "Data-Sets", "14217386", "TerraDS")
+OUTPUT_DIR   = BASE_DIR
 
 # ── Experiment settings ───────────────────────────────────────────────────────
 NUM_SAMPLES = 300       # fixed test set size across all 9 experiments

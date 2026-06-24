@@ -17,7 +17,7 @@ from pathlib import Path
 from tqdm import tqdm
 
 # ── Config ────────────────────────────────────────────────────────────────────
-DATASET_PATH   = "/Users/suryadevarachetansai/Desktop/LJMU_Thesis/Data-Sets/14217386/TerraDS"
+DATASET_PATH   = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "Data-Sets", "14217386", "TerraDS")
 EXTRACT_DIR    = os.path.join(DATASET_PATH, "extracted")
 TARGET_PER_PROVIDER = 400          # modules needed per provider
 RANDOM_SEED    = 42
@@ -99,7 +99,7 @@ def extract_until_enough():
 
 def build_index():
     import sys
-    sys.path.insert(0, "/Users/suryadevarachetansai/Desktop/LJMU_Thesis/Coding/Code")
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
     import chromadb
     from chromadb.utils import embedding_functions
